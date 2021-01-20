@@ -1,0 +1,98 @@
+/*Selector universal para recetear todo*/
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+    margin: 25px;
+}
+
+footer{
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    padding: 30px;
+}
+
+/*contenedor principal*/
+.padre{
+    /*border: 1px solid blue;*/
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.columna{
+    /*background-color: blueviolet;*/
+    width: 24%;
+}
+img{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5%;
+    position: relative;
+   
+    
+}
+
+img:hover{
+    top: -5px;
+    right: 5px;
+    box-shadow:4px 4px 4px 4px blueviolet;/*5pxarriba, 6px abajo*/
+}
+.zorrito:hover{
+    filter: grayscale(80%);
+    transition: all .5s ease-in-out .8s;
+}
+
+.desenfoque img:hover{
+    filter: blur(5px);
+    transition: .10s;
+    
+}
+
+.sepia img:hover{
+    filter: sepia(60%);
+    transition: .10s;
+}
+
+.opacidad img:hover{
+   /* filter: opacity(80%);*/
+    filter: saturate(40%);
+}
+
+/*media queris*/
+/*@media tipo-de-medio and (condicion)*/
+
+/*dispositivos grades*/
+@media all and (min-width: 992px){
+    body{
+        background-color: burlywood;
+    }
+    header{
+        color: crimson;
+    }
+}
+/*dispositivos medianos*/
+@media all and (min-width: 768px) and (max-width: 992px){
+    .columna{
+        width: 30%;
+    }
+}
+
+/*dispositivos moviles grandes*/
+
+@media all and (min-width: 600px) and (max-width: 768px){
+    .columna{
+       width: 48%; 
+    }
+}
+
+/*dispositivos moviles*/
+
+@media all and (max-width: 600px){
+    .columna{
+        width: 100%;
+    }
+}
